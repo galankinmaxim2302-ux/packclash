@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #1f2a44;
+    padding-bottom: 70px;
+}
+
+.app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 16px 30px 16px;
+    min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-circle {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #5e9bff, #3a7bd5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle span {
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1f2a44, #5e9bff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.badge {
+    background: #ffd166;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Страницы */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Битва */
+.battle-section {
+    background: linear-gradient(145deg, #f0f5fe, #ffffff);
+    border-radius: 36px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #e6edf4;
+}
+
+.sticker-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.sticker-card {
+    background: white;
+    border-radius: 24px;
+    padding: 12px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sticker-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sticker-name {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff9f4a;
+}
+
+.fight-btn {
+    width: 100%;
+    background: #5e9bff;
+    border: none;
+    padding: 16px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+/* Коллекция */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.collection-card {
+    background: #f8faff;
+    border-radius: 20px;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Список дуэлей */
+.duel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.duel-item {
+    background: #f8faff;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Контакты */
+.contact-card {
+    background: #f8faff;
+    border-radius: 28px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    color: #5e9bff;
+}
+
+/* Таб-бар */
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 16px 20px;
+    border-top: 1px solid #eef2f6;
+    z-index: 100;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.tab-icon {
+    font-size: 24px;
+}
+
+.tab-label {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.tab-item.active .tab-icon,
+.tab-item.active .tab-label {
+    color: #5e9bff;
+}
+
+.about-block {
+    background: #fef7e0;
+    border-radius: 28px;
+    padding: 20px;
+    border-left: 6px solid #ffd166;
+}
+
+footer {
+    text-align: center;
+    font-size: 11px;
+    color: #8b9ab0;
+    margin-top: 30px;
+}

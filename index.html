@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pack Clash — Битва стикеров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- Шапка -->
+    <div class="header">
+        <div class="logo-area">
+            <div class="icon-circle"><span>⚔️</span></div>
+            <div class="logo-text">Pack Clash</div>
+        </div>
+        <div class="badge">БЕТА</div>
+    </div>
+
+    <!-- СТРАНИЦА 1: ГЛАВНАЯ -->
+    <div id="homePage" class="page active">
+        <div class="battle-section">
+            <div class="sticker-preview">
+                <div class="sticker-card">
+                    <span class="sticker-emoji">🐱‍👤</span>
+                    <div class="sticker-name">Кот-ниндзя</div>
+                    <div style="font-size:11px; color:#5e9bff;">⚔️ 87 ед.</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="sticker-card">
+                    <span class="sticker-emoji">🤖</span>
+                    <div class="sticker-name">Роботрон</div>
+                    <div style="font-size:11px; color:#ff9f4a;">⚔️ 92 ед.</div>
+                </div>
+            </div>
+            <button class="fight-btn" id="fightBtn">⚔️ Начать битву</button>
+        </div>
+        <div class="about-block">
+            <div style="font-weight: 700; margin-bottom: 8px;">📦 О Pack Clash</div>
+            <div style="font-size:14px;">Преврати свои Telegram-стикеры в бойцов! Коллекционируй, улучшай и сражайся. Побеждай в турнирах и получай Telegram Stars.</div>
+        </div>
+    </div>
+
+    <!-- СТРАНИЦА 2: МОИ СТИКЕРЫ -->
+    <div id="stickersPage" class="page">
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+        <h3 style="margin-bottom: 16px;">🎴 Моя коллекция</h3>
+        <div class="collection-grid">
+            <div class="collection-card"><span class="sticker-emoji">🐱‍👤</span><div>Кот-ниндзя</div><div style="font-size:11px;">⚔️87</div></div>
+            <div class="collection-card"><span class="sticker-emoji">🤖</span><div>Роботрон</div><div style="font-size:11px;">⚔️92</div></div>
+            <div class="collection-card"><span class="sticker-emoji">🐉</span><div>Дракон</div><div style="font-size:11px;">⚔️105</div></div>
+            <div class="collection-card"><span class="sticker-emoji">🍕</span><div>Пицца</div><div style="font-size:11px;">⚔️30</div></div>
+            <div class="collection-card"><span class="sticker-emoji">🧙</span><div>Маг</div><div style="font-size:11px;">⚔️78</div></div>
+            <div class="collection-card"><span class="sticker-emoji">👻</span><div>Призрак</div><div style="font-size:11px;">⚔️65</div></div>
+        </div>
+        <div style="text-align: center; padding: 16px; background: #eef2fa; border-radius: 20px;">
+            📊 Всего: 6 бойцов | Самый сильный: Дракон (105⚔️)
+        </div>
+    </div>
+
+    <!-- СТРАНИЦА 3: ДУЭЛЬ -->
+    <div id="duelPage" class="page">
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+        <h3 style="margin-bottom: 16px;">⚡ Доступные соперники</h3>
+        <div class="duel-list">
+            <div class="duel-item" onclick="alert('Вызов Алексею отправлен!')">
+                <div>👤 Алексей<br><span style="font-size:12px;">⭐ 1250 рейтинга</span></div>
+                <div style="color:#5e9bff;">⚔️ Вызвать →</div>
+            </div>
+            <div class="duel-item" onclick="alert('Вызов Марии отправлен!')">
+                <div>👤 Мария<br><span style="font-size:12px;">⭐ 980 рейтинга</span></div>
+                <div style="color:#5e9bff;">⚔️ Вызвать →</div>
+            </div>
+            <div class="duel-item" onclick="alert('Бой с ботом! Удачи!')">
+                <div>🤖 Случайный бот<br><span style="font-size:12px;">тренировочный бой</span></div>
+                <div style="color:#ff9f4a;">🎮 Сразиться →</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- СТРАНИЦА 4: КОНТАКТЫ -->
+    <div id="contactsPage" class="page">
+        <button class="back-btn" onclick="showPage('home')">← Назад</button>
+        <h3 style="margin-bottom: 16px;">📞 Связь с нами</h3>
+        <div class="contact-card">
+            <div style="font-size: 48px;">📱</div>
+            <div style="font-weight: 700;">@packclash_support</div>
+            <div style="font-size: 12px; margin: 8px 0;">Telegram для вопросов</div>
+            <button class="fight-btn" style="margin-top: 12px;" onclick="alert('Напиши нам: @packclash_support')">Написать в поддержку</button>
+        </div>
+        <div class="contact-card">
+            <div style="font-size: 48px;">✉️</div>
+            <div style="font-weight: 700;">info@packclash.ru</div>
+            <div style="font-size: 12px; margin: 8px 0;">Для идей и предложений</div>
+            <button class="fight-btn" style="margin-top: 12px; background: #ffd166; color:#1f2a44;" onclick="alert('Спасибо! Ждём твои идеи на info@packclash.ru')">Написать отзыв</button>
+        </div>
+    </div>
+
+    <footer>Pack Clash | Битва стикеров в Telegram Mini App</footer>
+</div>
+
+<!-- Таб-бар -->
+<div class="tab-bar">
+    <div class="tab-item active" data-page="home">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-label">Главная</span>
+    </div>
+    <div class="tab-item" data-page="stickers">
+        <span class="tab-icon">🎴</span>
+        <span class="tab-label">Стикеры</span>
+    </div>
+    <div class="tab-item" data-page="duel">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Дуэль</span>
+    </div>
+    <div class="tab-item" data-page="contacts">
+        <span class="tab-icon">📞</span>
+        <span class="tab-label">Контакты</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
